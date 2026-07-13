@@ -1,0 +1,306 @@
+/* Style and Formatting */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root {
+    --base-color: #151E3F; 
+    --text-color: #000000;  
+    --text-color2: #ffffff;
+    --primary-color: #0B6970;
+    --secondary-color: #0B7044; 
+    --color-1: #247ba0; 
+    --color-2: #f3c677; 
+    --color-3: #8b2635; 
+}
+
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+/* Fonts */
+.spicy-rice-regular {
+  font-family: "Spicy Rice", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.playfair-display {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.gravitas-one-regular {
+  font-family: "Gravitas One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ultra-regular {
+  font-family: "Ultra", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+html {
+    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
+    color: var(--text-color);
+
+}
+
+body{
+    margin: 0; 
+    background-color: var(--base-color);
+} 
+
+ /* White Background */
+.container {
+    width: 95%;
+    max-width: 1400px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+h1{
+    font-family:  'Ultra', 'Spicy Rice', 'Playfair Display', 'Times New Roman', Times, serif;
+    color: var(--text-color2);
+}
+
+h2,h3 {
+    font-family:  'Playfair Display', 'Times New Roman', Times, serif; 
+
+}
+
+nav {
+    margin: 1em auto 3em auto;
+    width: min(1000px, 100%);
+} 
+
+nav ul {
+    display: flex; 
+    align-items: center; 
+    list-style-type: none; 
+    gap: 2em
+} 
+
+nav li:first-child {
+    margin-right: auto; 
+    font-family:  'Playfair Display', 'Times New Roman', Times, serif; 
+    font-weight: bold; 
+}
+
+nav a { 
+    display: inline-block;
+    background-color: #F3C677; /* Yellow */
+    color: #151E3F;            /* Your dark blue */
+    text-decoration: none;
+    padding: 12px 24px;        /* Makes the boxes bigger */
+    font-size: 1.2rem;         /* Larger text */
+    font-weight: bold;
+    border-radius: 4px;        /* Optional: slightly rounded corners */
+    transition: background-color 0.3s; 
+    
+}
+
+nav a:hover { 
+    text-decoration: underline;
+}
+
+header, section {
+    margin: 2em auto; 
+    width: min(75em, 100%); 
+    background-color: var(--color-1);
+    padding: min(2em, 15%); 
+} 
+
+/* Header */
+.flex-container {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3em; 
+}
+
+
+header img {
+    max-width: 100%;
+    border-radius: 1em;
+    object-fit: cover; 
+    object-position: bottom;
+}
+
+.text-container {
+    flex: 0 1 34em;
+}
+
+h1 {
+    font-size: 2.5rem; 
+}
+
+.text-container p {
+    margin: .75em 0 1em 0; 
+    font-size: 1.25rem;
+}
+
+.cta-button{ 
+    display: inline-block; 
+    text-decoration: none;
+    color: white; 
+    background-color: var(--primary-color);
+    padding: .75em 1.25em; 
+    border-radius: .5em;
+    font-weight: 600;
+}
+
+/* Header Section */
+.secondary { 
+    background-color: var(--secondary-color);
+}
+
+section { 
+    padding: 3em min(2em, 15%);
+    background-color: var(--color-2);
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+section p {
+    margin-top: 1em; 
+    font-size: 1.25rem;
+}
+
+/* Gallary Section */
+section#my-work {
+    .work-item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.work-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.work-item img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.work-item div {
+    flex: 1;
+}
+}
+
+.grid-container2 {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    display: grid; 
+    width: 100%;
+    grid-template-colums: repeat(4, 1fr); 
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "img-1 img-1 img-2 img-3"
+    "img-1 img-1 img-4 img-5";
+    gap: 1em
+}
+
+.grid-container img{ 
+    height: 100%; 
+    width: 100%; 
+    border-radius: .5em; 
+    transition: 100ms ease;
+}
+
+.grid-container img:hover {
+    scale: 1.05;
+} 
+
+/* common questions section */
+details{
+    margin-top: 1em; 
+    background-color: var(--base-color);
+    border-radius: 1em;
+}
+
+details summary {
+    padding: 1em; 
+    font-size: 1.7rem; 
+    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
+}
+
+details p {
+    padding: 0 2em 2em 2em;
+} 
+
+footer {
+    padding-bottom: 1.5em;
+    text-align: center;
+}
+
+footer a {
+    margin: 0 1em;
+    text-decoration: none; 
+    color: var(--text-color);
+}
+
+footer a:hover {
+    text-decoration:underline;
+}
+
+/* This is to change screen size */
+@media(max-width: 988px){
+    header{
+        text-align: center;
+    }
+
+    header .text-container {
+        padding-top: 0;
+    }
+}
+
+@media(max-width: 640px){ 
+    nav li {
+        display: none;
+    }
+
+    nav li:first-child,
+    nav li:last-child {
+        display: block;
+    }
+
+    header{ 
+        margin-top: 0;
+    }
+
+    .cta-button {
+        margin-top: .5em;
+        width: 100%
+    }
+
+    .grid-container {
+        display: ;
+        flex-direction: column;
+    }
+
+    .text-container p{
+        font-size:1rem;
+    }
+
+    h2{
+        font-size: 1.5rem;
+    }
+}
