@@ -3,25 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Presentation Document</title>
+  <meta name="theme-color" content="#ffffff">
+  <title>My Document</title>
+
   <style>
-    html, body {
-      margin: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
+    * {
+      box-sizing: border-box;
     }
 
-    iframe {
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      min-height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      height: 100dvh;
+      overflow: hidden;
+      background: #f4f4f4;
+    }
+
+    .toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 16px;
+      background: white;
+      border-bottom: 1px solid #ddd;
+      flex-shrink: 0;
+    }
+
+    .toolbar a {
+      color: #1457b5;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .viewer {
+      flex: 1;
+      min-height: 0;
+      width: 100%;
+    }
+
+    .viewer iframe {
       display: block;
       width: 100%;
       height: 100%;
-      border: none;
+      border: 0;
+    }
+
+    @media (max-width: 600px) {
+      .toolbar {
+        padding: 12px;
+      }
+
+      .toolbar a {
+        font-size: 13px;
+      }
     }
   </style>
 </head>
+
 <body>
-  <iframe src="./How to Choose a Telescope.pdf" title="Presentation PDF">
-  </iframe>
+  <header class="toolbar">
+    <strong>My Document</strong>
+    <a href="./my-document.pdf" target="_blank" rel="noopener">
+      Open PDF ↗
+    </a>
+  </header>
+
+  <main class="viewer">
+    <iframe
+      src="./my-document.pdf"
+      title="Document PDF"
+    ></iframe>
+  </main>
 </body>
 </html>
